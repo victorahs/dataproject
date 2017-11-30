@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>version 1 - fonctionnel uniquement</title>
+
+
+  </head>
+
+  <body>
+
+
+COUCOU
+ 	<form method="get" action="include/getResults.php">
+
+		<label for="etablissements"> Lieu de visite </label>
+		<input list="listId" name="etablissements" id="nameList" placeholder="choississez un lieu à visiter" >
+			<datalist id="listId">
+				{{#eList}}
+				<option value="{{id}}">{{Name_Est}}</option>
+				{{/eList}}
+			</datalist>
+		<br />
+		<p>OU</p>
+		<input list="listCity" name="city" id="citiesList" placeholder="choississez une ville" >
+			<datalist id="listCity">
+				{{#eList}}
+				<option value="{{City}}"></option>
+				{{/eList}}
+			</datalist>
+
+		<input type="submit" name="send" value="Find it!">
+ 	</form>
+  </body>
+  </html>

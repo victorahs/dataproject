@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- import css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="libs/materialize/css/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/styleResult.css">
+
+    <title>Loisirs pour tous</title>
+
+  </head>
+
+  <body>
+
+      <header class="row">
+        <a href="../index.php"><img id="logo"  src="../assets/img/LoisirsPourTous_white.svg"></a>
+      </header>
+
+      <main>
+
+        <div id="results">
+
+          <div  id="mapid" class="bloc-map">
+
+          </div>
+
+
+          <div class="bloc-list">
+
+            <section class="row center-align ">
+              <form id="filterHandicap" action="getResults.php" method="post" class="row">
+                <h2 class="left-align">Filtrer par type(s) de handicap :</h2>
+                <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box1" name="surdity" value="surdity" />
+                <label for="filled-in-box1">Auditif</label>
+              </p>
+              <p>
+
+                <input type="checkbox" class="filled-in" id="filled-in-box2" name="blind" value="blind"/>
+                <label for="filled-in-box2">Visuel</label>
+              </p>
+              <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box3" name="mental" value="mental"/>
+                <label for="filled-in-box3">Mental</label>
+              </p>
+              <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box4" name="mobility" value="mobility"/>
+                <label for="filled-in-box4">Moteur</label>
+              </p>
+
+                <button class="btn waves-effect waves-light" type="submit" name ="Filter">Filtrer</button>
+              </form>
+
+            <section  class="list">
+              {{#item}}
+                  <div class="card grey lighten-3 " id="etbm{{id}}">
+                              <article class="card-content">
+
+                                <h2 class="card-title">{{Name_Est}}</h2>
+
+                                <ul class="etbm-picto">
+                                  {{#H_Auditory}}
+                                    <li class="auditif"><img src="../assets/img/auditif.svg" alt="accès handicap auditif"/></li>
+                                  {{/H_Auditory}}
+                                  {{#H_Visual}}
+                                    <li class="visuel"><img src="../assets/img/visuel.svg" alt="accès handicap visuel"/></li>
+                                  {{/H_Visual}}
+                                  {{#H_Mobility}}
+                                    <li class="moteur"><img src="../assets/img/moteur.svg" alt="accès handicap moteur"/></li>
+                                  {{/H_Mobility}}
+                                  {{#H_Mental}}
+                                    <li class="mental"><img src="../assets/img/mental.svg" alt="accès handicap mental"/></li>
+                                  {{/H_Mental}}
+                                </ul>
+                                <p>
+                                {{#Email_Contact}}{{EMail_Contact}}<br />{{/Email_Contact}}
+                                {{#Phone}}tél : <a href="tel:{{Phone}}">{{Phone}}</a>{{/Phone}}{{#Fax}} | fax : {{Fax}} {{/Fax}}<br />
+                                {{Address}}<br />
+                                {{Postcode}} {{City}}<br />
+                                <a href="{{Siteweb}}" target="blank">{{Siteweb}}<br /></a>
+                              </p>
+                          </article>
+                  </div>
+                {{/item}}
+              </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+      </main>
+
+      <footer class="row">
+          <div id="rs" class="col m3 push-m1">
+              <a href="#"><img id="logofb" src="../assets/img/logofb-white.png" alt="logo Facebook"/></a>
+              <a href="#"><img id="logotwitter" src="../assets/img/logotwitter-white.png" alt="logo Twitter"/></a>
+          </div>
+          <div id="link"  class="col m2 push-m6">
+              <a href="#">A propos</a>
+              <a href="#">Contact</a>
+          </div>
+      </footer>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+
+      <script type="text/javascript">
+
+        var mymap = L.map('mapid').setView([{{LatitudeCarte}},{{LongitudeCarte}}], 13);// definition de la map avec point de coordonnées
+
+          /*type de "tiles" pour la map, on peut en changer (skin)*/
+          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidmljdG9yeXNoIiwiYSI6ImNpeTVzdGI4MTAwMnMyd3J2OXZ3emdkeWcifQ.T7A873FB8CceQ5KvcO943Q', {
+          maxZoom: 18,
+          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+           '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+           'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+          id: 'mapbox.streets'
+          }).addTo(mymap);
+
+        {{#item}}
+
+          var handiImg{{id}}="";
+
+          {{#H_Auditory}}
+            handiImg{{id}}+='<img src="../assets/img/auditif.svg" class="imgPop">';
+          {{/H_Auditory}}
+
+          {{#H_Visual}}
+            handiImg{{id}}+='<img src="../assets/img/visuel.svg" class="imgPop">';
+          {{/H_Visual}}
+
+          {{#H_Mental}}
+            handiImg{{id}}+='<img src="../assets/img/mental.svg" class="imgPop">';
+          {{/H_Mental}}
+          {{#H_Mobility}}
+            handiImg{{id}}+='<img src="../assets/img/moteur.svg" class="imgPop">';
+          {{/H_Mobility}}
+
+
+          var popup{{id}} = L.popup({minWidth:100},{keepInView:"true"}).setContent("<a href='#etbm{{id}}'><h5 class='card-title'>{{Name_Est}}</h5></a>"+ handiImg{{id}}+"");
+
+          var marker{{id}} = L.marker([{{Latitude}}, {{Longitude}}]).addTo(mymap);
+          marker{{id}}.bindPopup(popup{{id}});
+
+        {{/item}}
+
+      </script>
+
+
+
+
+  </body>
+</html>

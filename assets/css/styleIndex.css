@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+body, html, footer, header{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body{
+  font-family: "Overpass";
+
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow: hidden;
+
+  background-image:url('../img/background_moy.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header{
+  border-bottom: solid #993399 1px;
+  height: 12vh;
+  font: "Overpass" !important;
+  background-color: #fff !important;
+}
+
+
+#logo{
+  width: 25vh;
+  margin: 0.5% ;
+  display: inline;
+}
+
+
+#block-search{
+  width: 90%;
+  margin: auto;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.90);
+}
+
+
+#or, #orLg{
+  font-size : 2.5rem;
+  line-height: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+#orLg{
+  font-size : 4rem;
+  margin-top:4rem;
+}
+
+#labelGeo{
+  line-height: 6rem;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+#myPosition{
+  margin-top: 1%;
+}
+
+
+footer{
+  height: 12vh !important;
+  padding-top: 1% !important;
+  background-color: #fff !important;
+}
+
+#logofb, #logotwitter{
+  width: 4vw;
+  padding-left: 5% !important;
+}
+
+
+#link a{
+  color : #993399;
+  text-transform: none;
+  font-size: 1.5em;
+  padding-left: 8% !important;
+  margin-top: 3% !important;
+  font-weight: bold;
+  float: right;
+}
+
+footer .row {
+  margin-bottom: 0 !important;
+}
+
+
+/* ------ modif sur couleur materialize (note pour plus tard : passer par sass)--------- */
+
+  /* label color */
+   .input-field label, #geoLabel {
+     color: #000;
+     font-size: 1.5rem;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #000;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #000;
+   }
+
+
+  [type="checkbox"].filled-in:checked + label:after {
+      border: 2px solid #000;
+      background-color: #000;
+  }
+

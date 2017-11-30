@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+*{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body{
+  font-family: "Overpass";
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+
+header{
+  border-bottom: solid #993399 1px;
+  height: 14.5vh;
+  font: "Overpass" !important;
+
+}
+
+#logo img{
+  width: 30vh;
+  padding-top: 0.5% !important;
+}
+
+
+#homepage{
+  height: 75vh !important;
+  background-image:url('../img/background.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+}
+
+
+#search{
+  padding-top: 20% !important;
+
+  }
+
+#search input:focus {
+  border-bottom: 0.2px solid #993399 !important;
+  box-shadow: 0 0.2px 0 0 #993399 !important;
+  background-color: #fff !important;
+}
+
+#search input[type=text].valid{
+  -webkit-box-shadow: 0 1px 0 0 red !important;
+  -moz-box-shadow: 0 1px 0 0 red !important;
+  box-shadow: 0 0.2px 0 0 red !important;
+  border-bottom: 0.2px solid #888 !important;
+  background-color: #fff !important;
+}
+
+#or{
+  font-size : 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #993399;
+  padding-left: 1% !important;
+}
+
+.btn{
+  background-color: #993399 !important;
+  height: 5% !important;
+}
+
+#myPosition{
+  font-size: 1em !important;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 3% !important;
+}
+footer{
+  height: 5vh !important;
+  padding-top: 1% !important;
+}
+
+#logofb, #logotwitter{
+  width: 4vw;
+  margin-right: 1% !important;
+}
+#link a{
+  color : #993399;
+  text-transform: none;
+  font-size: 1.5em;
+  padding-left: 3% !important;
+  margin-top: 3% !important;
+  font-weight: bold;
+}
+
+/*PAGE RESULTATS*/
+#displayresult{
+}
+
+#filterHandicap{
+  background-color: #fff !important;
+}
+#results{
+  display: flex;
+  height: 75vh !important;
+}
+
+
+.bloc-list{
+  overflow: auto !important;
+}
+
+#mapid{
+  width: 50vw;
+}
+
+/*.etbm{
+  height: 5vh;
+}*/
+section h2{
+  font-size: 1.5em !important;
+  font-weight: 700 !important;
+}
+li img{
+  width: 3vw !important;
+}
+li{
+  display: inline !important;
+  list-style: none !important;
+}
+
+/*#mapid img{
+  width: 3vw !important;
+}*/

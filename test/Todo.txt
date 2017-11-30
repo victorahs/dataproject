@@ -1,0 +1,11 @@
+@TODO
+
+I. SITE
+> supp des cookies ou fermerture de session ?
+> recherche des ets par ID == affiche du nom PAS de l'id
+> Front Filtre
+> Front général ??
+> Geolocalisation du user
+
+II. BDD
+>Vérifier longitude & altitude = cause adresse mal-saisie ?? : comment MAJ automatiquement ?

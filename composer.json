@@ -1,0 +1,5 @@
+{
+    "require": {
+        "maxh/php-nominatim": "^1.2"
+    }
+}

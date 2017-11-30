@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+body, html,header, footer, a{
+  margin: 0 ;
+  padding: 0 ;
+}
+
+body{
+  font-family: "Overpass";
+/*  height: 100vh !important;*/
+  width: 100vw !important;
+  overflow-x: hidden;
+
+
+}
+
+figure{
+        margin-right: 0px;
+}
+header{
+  border-bottom: solid #993399 1px;
+  height: 12vh;
+  font: "Overpass" !important;
+  background-color: #993399;
+}
+
+#logo{
+  width: 31vh;
+  margin: 0;
+   
+}
+
+
+#homepage{
+/*  height: 75vh !important;*/
+  /*background-image:url('../img/background.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;*/
+}
+
+
+
+
+
+
+footer{
+  height: 12vh !important;
+  padding-top: 1% !important;
+  margin-top: 20px;
+  background-color: #993399 !important;
+}
+
+#logofb, #logotwitter{
+  width: 19%;
+  margin-right: 2%;
+
+}
+svg #fond{
+    fill:#fff;
+}
+
+button{
+    background-color: #993399 !important;
+}
+
+ .input-field input[type=text]:focus {
+     border-bottom: 1px solid #993399 ;
+     box-shadow: 0 1px 0 0 #993399 ;
+   }
+
+.input-field input[type=email]:focus {
+     border-bottom: 1px solid #993399 ;
+     box-shadow: 0 1px 0 0 #993399 ;
+   }
+
+.materialize-textarea:focus {
+     border-bottom: 1px solid #993399 ;
+     box-shadow: 0 1px 0 0 #993399 ;
+   }
+
+
+.input-field input[type=text]:focus + label {
+     color: #993399;
+   }
+
+.input-field input[type=email]:focus + label {
+     color: #993399;
+   }
+
+input,footer .row{
+    margin-bottom: 0 !important;
+}
+section{
+    margin-bottom: 5%;
+}
+
+
+

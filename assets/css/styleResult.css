@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+body, html,header, footer, a{
+  margin: 0 ;
+  padding: 0 ;
+}
+
+body{
+  font-family: "Overpass";
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow: hidden;
+
+}
+
+
+header{
+  border-bottom: solid #993399 1px;
+  height: 12vh;
+  font: "Overpass" !important;
+  background-color: #993399;
+}
+
+#logo{
+  width: 28vh;
+  margin: 0.5% ;
+}
+
+
+#homepage{
+/*  height: 75vh !important;*/
+  /*background-image:url('../img/background.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;*/
+}
+
+
+#search{
+  padding-top: 20% !important;
+
+  }
+
+#search input:focus {
+  border-bottom: 0.2px solid #993399 !important;
+  box-shadow: 0 0.2px 0 0 #993399 !important;
+  background-color: #fff !important;
+}
+
+#search input[type=text].valid{
+  -webkit-box-shadow: 0 1px 0 0 red !important;
+  -moz-box-shadow: 0 1px 0 0 red !important;
+  box-shadow: 0 0.2px 0 0 red !important;
+  border-bottom: 0.2px solid #888 !important;
+  background-color: #fff !important;
+}
+
+#or{
+  font-size : 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #993399;
+  padding-left: 1% !important;
+}
+
+.btn{
+  background-color: #993399 !important;
+}
+
+#myPosition{
+  font-size: 1em !important;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 3% !important;
+}
+/*footer{
+
+  background-color: #993399;
+  height: 12vh;
+  margin-top: 20px;
+
+}*/
+footer{
+  height: 12vh !important;
+  padding-top: 1% !important;
+  margin-top: 20px;
+  background-color: #993399 !important;
+}
+
+#logofb, #logotwitter{
+  width: 4vw;
+  padding-left: 5% !important;
+}
+
+#link a{
+  color : #fff;
+  text-transform: none;
+  font-size: 1.5em;
+  padding-left: 8% !important;
+  margin-top: 3% !important;
+  font-weight: bold;
+  float: right;
+}
+
+/*#logofb, #logotwitter{
+  width: 4vw;
+  margin-right: 1% !important;
+}
+#link a{
+  color : #fff;
+  text-transform: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}*/
+
+/* PAGE RESULTATS */
+#displayresult{
+}
+
+#filterHandicap{
+  background-color: #fff !important;
+}
+#results{
+  display: flex;
+  height: 72vh;
+  width: 100vw;
+}
+
+
+.bloc-list{
+  margin: auto;
+}
+
+.list{
+  /*height: 49vh;*/
+  height: 70vh;
+  width: 45vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#mapid{
+  width: 45vw;
+  margin-left:2.5vw;
+}
+
+/*.etbm{
+  height: 5vh;
+}*/
+
+section h2{
+  font-size: 1.5em !important;
+  font-weight: 700 !important;
+}
+li img{
+  width: 3vw !important;
+}
+li{
+  display: inline !important;
+  list-style: none !important;
+}
+
+.card{
+  margin-right: 1.5vw;
+}
+.card .card-content .card-title{
+  line-height: 30px;
+}
+.card-title{
+  margin-top:0;
+}
+.imgPop {
+  width: 20%;
+}
+/*#mapid img{
+  width: 3vw !important;
+}*/
